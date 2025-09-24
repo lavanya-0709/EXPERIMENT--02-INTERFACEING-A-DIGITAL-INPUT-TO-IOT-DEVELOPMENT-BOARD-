@@ -1,8 +1,7 @@
-###  DATE: 
-
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  DATE: 24-09-25
+###  NAME: LAVANYA S
+###  ROLL NO : 212223230112
+###  DEPARTMENT: AIDS
 
 
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
@@ -77,12 +76,36 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
+```
 
+while (1)
+  {
+    IRsensor();
+  }
+  /* USER CODE END 3 */
+}
+void IRsensor()
+{
+	IRsensorop=HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_3);
+	if (IRsensorop==1)
+		{
+		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_SET);
+		HAL_Delay(500);
+		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+		HAL_Delay(500);
+}
+else
+{
+	HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+}
+}
+```
 
 
 ## Output  :
  
- 
+ ![WhatsApp Image 2025-09-24 at 14 21 18_5985d7d7](https://github.com/user-attachments/assets/23858de8-7f83-456c-87c1-7687b28f6f01)
+
  
  
 ## Result :
