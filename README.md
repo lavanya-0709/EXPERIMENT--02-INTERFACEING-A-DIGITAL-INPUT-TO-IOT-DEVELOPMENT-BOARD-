@@ -1,4 +1,4 @@
-![WhatsApp Image 2025-11-28 at 15 34 30_c27eed9e](https://github.com/user-attachments/assets/848e7b79-804d-4b70-9845-38942b79ea67)###  NAME: LAVANYA S
+###  NAME: LAVANYA S
 ###  ROLL NO :212223230112
 ###  DEPARTMENT: B.Tech - AIDS
 
