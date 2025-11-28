@@ -1,7 +1,6 @@
-###  DATE: 24-09-25
-###  NAME: LAVANYA S
-###  ROLL NO : 212223230112
-###  DEPARTMENT: AIDS
+![WhatsApp Image 2025-11-28 at 15 34 30_c27eed9e](https://github.com/user-attachments/assets/848e7b79-804d-4b70-9845-38942b79ea67)###  NAME: LAVANYA S
+###  ROLL NO :212223230112
+###  DEPARTMENT: B.Tech - AIDS
 
 
 # EXPERIMENT--02-INTERFACING-A-DIGITAL-INPUT-TO-IOT-DEVELOPMENT-BOARD-
@@ -76,27 +75,7 @@ The full form of an ARM is an advanced reduced instruction set computer (RISC) m
 
 
 ## STM 32 CUBE PROGRAM :
-```
-/* USER CODE BEGIN Header */
-/**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
-/* USER CODE END Header */
-/* Includes ------------------------------------------------------------------*/
-#include "main.h"
+ ```c
 #include "main.h"
 #include"stdbool.h"
 bool IRSENSOR;
@@ -176,25 +155,26 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  void IRPAIR()
-	  {
-	  IRSENSOR = HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_4);
-	  if(IRSENSOR==0)
-	  {
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
-	  HAL_Delay(1000);
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
-	  HAL_Delay(1000);
-	  }
-	  else
-	  {
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
-	  HAL_Delay(1000);
-	  }
-	  }
+	  IRPAIR();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
+}
+void IRPAIR()
+{
+IRSENSOR = HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_4);
+if(IRSENSOR==0)
+{
+HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
+HAL_Delay(1000);
+HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
+HAL_Delay(1000);
+}
+else
+{
+HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
+HAL_Delay(1000);
+}
 }
 
 /**
@@ -303,12 +283,18 @@ void assert_failed(uint8_t *file, uint32_t line)
 }
 #endif /* USE_FULL_ASSERT */
 
-
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
 ```
 
 
 ## Output  :
+
+ ### LED off
+ ![WhatsApp Image 2025-11-28 at 15 34 30_2df30c49](https://github.com/user-attachments/assets/46b26596-7a72-467d-93a9-0dc2ae515bc0)
+
+ ### LED on
  
+![WhatsApp Image 2025-09-26 at 13 28 03_4c4d8fab](https://github.com/user-attachments/assets/654197c8-6c37-4a00-a955-64622fb0af80)
 
  
 ## Result :
